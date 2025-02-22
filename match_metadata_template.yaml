@@ -1,0 +1,38 @@
+HOME_TEAM:
+  name: "Chelsea LFC"
+  logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/5/51/Logo_Chelsea.svg/315px-Logo_Chelsea.svg.png?20230217231922"
+  lineup:
+    # dict of number: name
+    1: "Rut Hedvig Lindahl"
+    4: "Millie Bright"
+    16: "Magdalena Ericsson"
+    34: "Hannah Jayne Blundell"
+    18: "Maren Mjelde"
+    10: "So-yun Ji"
+    24: "Drew Spence"
+    3: "Crystal Dunn"
+    6: "Anita Amma Ankyewah Asante"
+    5: "Francesca Kirby"
+    23: "Ramona Bachmann"
+
+AWAY_TEAM:
+  name: "Manchester City WFC"
+  logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/b/ba/Logo_Manchester_City_2016.svg/langfr-195px-Logo_Manchester_City_2016.svg.png"
+  lineup:
+    26: "Ellie Roebuck"
+    14: "Esme Beth Morgan"
+    23: "Abbie McManus"
+    5: "Jennifer Beattie"
+    3: "Demi Stokes"
+    8: "Jill Scott"
+    24: "Keira Walsh"
+    11: "Isobel Christiansen"
+    17: "Nikita Parris"
+    15: "Julia Spetsmark"
+    10: "Nadia Nadim"
+
+COMPETITION:
+  name: FA Women's Super League
+  logo: "https://upload.wikimedia.org/wikipedia/fr/thumb/0/00/Barclays_FA_Women%27s_Super_League_logo.svg/langfr-195px-Barclays_FA_Women%27s_Super_League_logo.svg.png"
+
+DATE: "2024-11-11"

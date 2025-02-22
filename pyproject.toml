@@ -1,0 +1,58 @@
+[project]
+name = "football-commentator"
+version = "0.1.0"
+description = "A football commentator"
+readme = "README.md"
+authors = [{ name = "Anas Mejgari", email = "anasmejgari@gmail.com" }]
+requires-python = ">=3.12"
+dependencies = [
+    "langchain>=0.3.19",
+    "langchain-core>=0.3.37",
+    "langchain-openai>=0.3.6",
+    "openai>=1.63.2",
+    "pathlib>=1.0.1",
+    "pydantic>=2.10.6",
+    "python-dotenv>=1.0.1",
+    "streamlit>=1.42.2",
+]
+
+[project.scripts]
+football-commentator = "football_commentator.app.main:run_app"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[dependency-groups]
+dev = [
+    "football-commentator",
+    "isort>=6.0.0",
+    "mypy>=1.15.0",
+    "pytest>=8.3.4",
+    "ruff>=0.9.7",
+]
+
+[tool.ruff]
+line-length = 99
+include = ["src/**/*.py"]
+
+[tool.ruff.lint]
+select = [
+    "E",   #pycodestyle
+    "F",   #Pyflakes 
+    "UP",  #pyupgrade
+    "B",   #flake8-bugbear
+    "D",   #pydocstyle
+    "SIM", #flake8-simplify (SIM)
+    "I",   #isort
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.mypy]
+ignore_missing_imports = true
+exclude = "vertex_features"
+
+[tool.uv.sources]
+football-commentator = { workspace = true }
