@@ -13,7 +13,7 @@ from football_commentator.utils import load_match_info_from_config
 MATCH_INFO = load_match_info_from_config(PATH_MATCH_INFO)
 
 
-# ----------------- Remove top space with custom CSS -----------------
+# ----------------- CSS Styling for the Timer & Commentary Areas -----------------
 st.set_page_config(layout="wide")
 st.markdown(
     """
@@ -60,7 +60,7 @@ st.markdown(
     unsafe_allow_html=True,
 )
 
-# ----------------- Session State Setup -----------------
+# Sesstion state setup with
 if "start_time" not in st.session_state:
     st.session_state.start_time = time.time()
 if "comment_index" not in st.session_state:
@@ -131,10 +131,11 @@ with col2:
 # Commentary container placeholder
 commentary_placeholder = st.empty()
 
-# ----------------- Add Initial Kick Off Event -----------------
+# Additional and Starting event: The Kick Off
 st.session_state.commentary_data.append({"Time": "00'00", "Commentary": "Kick Off"})
 
 last_minutes, last_secondes = 0, 0
+
 # ----------------- Main Loop -----------------
 while True:
     # Calculate elapsed time for the timer

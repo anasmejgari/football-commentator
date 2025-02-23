@@ -24,4 +24,5 @@ SUPPORTED_EVENTS = {
     "interception",
     "ball_receipt",
     "duel",
+    "play_pattern",
 }

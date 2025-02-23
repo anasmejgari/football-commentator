@@ -50,17 +50,18 @@ class JSONPreprocessor(Preprocessor):
         Returns:
             str: description of the event.
         """
+        # The structure of file introduce some fields provindin description
+        # Those fields have dict as value
+        # A field 'name' contains description of this field
         description: dict[str, str] = {}
-        if "play_pattern" in event and "name" in event["play_pattern"]:
-            description["play_pattern"] = event["play_pattern"]["name"]
 
         for event_detail in SUPPORTED_EVENTS.intersection(event.keys()):
             details: dict[str, Any] = event[event_detail]
-
-            for key, val in details.items():
+            for key, val in details.items():  # Check if name is in the field.
                 if (isinstance(val, dict)) and ("name" in val):
                     description[key] = val["name"]
 
+        # Generate textual description
         text_description = "Additional Informations: " + ", ".join(
             f"({key}: {val})" for key, val in description.items()
         )
